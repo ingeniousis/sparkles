@@ -13,18 +13,23 @@ namespace SparklesWebsite
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/lib-scripts").Include(                      
-                      "~/Scripts/jquery-{version}.js",
-                      "~/Scripts/bootstrap.js",
-                      "~/scripts/angular.js",
-                      "~/scripts/angular-ui-router.js"));
+                      "~/Scripts/lib/jquery-{version}.js",
+                      "~/Scripts/lib/bootstrap.js",
+                      "~/Scripts/lib/angular.js",
+                      "~/Scripts/lib/classie.js",
+                      "~/Scripts/lib/jquery.easing.{version}.js",                      
+                      "~/Scripts/lib/jqBootstrapValidation.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/app-scripts").Include(
+                      "~/Scripts/app/starter.js"));
 
             bundles.Add(new StyleBundle("~/Content/lib-css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/bootstrap-theme.css",
-                     "~/Content/font-awesome.css"));
+                      "~/Content/bootstrap.min.css",
+                      "~/Content/font-awesome.css"));
 
             bundles.Add(new StyleBundle("~/Content/app-css").Include(
-                      "~/Content/site.css"));
+                      "~/Content/site.css",
+                      "~/Content/icomoon.css"));
         }
     }
 }

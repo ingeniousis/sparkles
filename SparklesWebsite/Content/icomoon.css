@@ -24,8 +24,11 @@
 }
 
 .icon-pplarge:before {
-	content: "\e600";
+	content: "\e600";    
+    line-height: 10px;
+    font-size: 120px;
 }
 .icon-ppsmall:before {
 	content: "\e601";
+    font-size: 144px;
 }

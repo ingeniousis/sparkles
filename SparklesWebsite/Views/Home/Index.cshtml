@@ -4,18 +4,87 @@
 
 <!DOCTYPE html>
 
-<html>
+<html ng-app="app">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pizzicato Peeps</title>
-    
+
+    <link rel="shortcut icon" href="img/favicon.ico">
     @Styles.Render("~/Content/lib-css")
-    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/app-css")
 </head>
-<body> 
-    <!-- /.container -->
+<body id="page-top" class="index" data-spy="scroll" data-target=".navbar-fixed-top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#page-top"><span class="icon-pplarge icon-size-3x"></span></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#portfolio">Tutorials</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#about">About</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div ng-include="'../Partials/Header.html'"></div>
+    </header>
+
+    <!-- Tutorials Grid Section -->
+    <section id="portfolio">
+        <div ng-include="'../Partials/Tutorials.html'"></div>
+    </section>
+
+    <!-- About Section -->
+    <section class="success" id="about">
+        <div ng-include="'../Partials/About.html'"></div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <contactform></contactform>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div ng-include="'../Partials/Footer.html'"></div>
+    </footer>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top page-scroll visible-xs visble-sm">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+
     @Scripts.Render("~/bundles/lib-scripts")
-    @Scripts.Render("~/bundles/scripts")
+    @Scripts.Render("~/bundles/app-scripts")
+    <script src="Scripts/lib/cbpAnimatedHeader.js"></script>
 </body>
 </html>
