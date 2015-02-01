@@ -17,8 +17,7 @@ namespace SparklesWebsite
                       "~/Scripts/lib/bootstrap.js",
                       "~/Scripts/lib/angular.js",
                       "~/Scripts/lib/classie.js",
-                      "~/Scripts/lib/jquery.easing.{version}.js",                      
-                      "~/Scripts/lib/jqBootstrapValidation.js"));
+                      "~/Scripts/lib/jquery.easing.{version}.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/app-scripts").Include(
                       "~/Scripts/app/starter.js"));
