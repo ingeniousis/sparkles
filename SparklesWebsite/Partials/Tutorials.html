@@ -6,8 +6,8 @@
         </div>
     </div>
     <div class="row">
-        <div ng-repeat="tutorial in tutorials" class="col-sm-4 portfolio-item">
-            <a href="" class="portfolio-link" data-toggle="modal">
+        <div ng-repeat="tutorial in tutorials" class="col-sm-3 portfolio-item">
+            <a href="{{tutorial.Href}}" data-toggle="lightbox" data-width="800" data-title="{{tutorial.Name}}" data-footer="{{tutorial.Description}}" class="portfolio-link">
                 <div class="caption">
                     <div class="caption-content">
                         <i class="fa fa-play fa-3x"></i>

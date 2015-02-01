@@ -6,32 +6,38 @@ app.controller('TutorialsController', ['$scope',
         $scope.tutorials = [{
             "Name": "Video One",
             "Description": "Video One Description",
-            "Thumbnail": "img/portfolio/img1.jpg"
+            "Thumbnail": "img/portfolio/img1.jpg",
+            "Href": "https://www.youtube.com/watch?v=OPf0YbXqDm0"
         },
         {
             "Name": "Video Two",
             "Description": "Video Two Description",
-            "Thumbnail": "img/portfolio/img2.jpg"
+            "Thumbnail": "img/portfolio/img2.jpg",
+            "Href": "https://www.youtube.com/watch?v=OPf0YbXqDm0"
         },
         {
             "Name": "Video Three",
             "Description": "Video Three Description",
-            "Thumbnail": "img/portfolio/img3.jpg"
+            "Thumbnail": "img/portfolio/img3.jpg",
+            "Href": "https://www.youtube.com/watch?v=OPf0YbXqDm0"
         },
         {
             "Name": "Video Four",
             "Description": "Video Four Description",
-            "Thumbnail": "img/portfolio/img4.jpg"
+            "Thumbnail": "img/portfolio/img4.jpg",
+            "Href": "https://www.youtube.com/watch?v=OPf0YbXqDm0"
         },
         {
             "Name": "Video Five",
             "Description": "Video Five Description",
-            "Thumbnail": "img/portfolio/img5.jpg"
+            "Thumbnail": "img/portfolio/img5.jpg",
+            "Href": "https://www.youtube.com/watch?v=OPf0YbXqDm0"
         },
         {
             "Name": "Video Six",
             "Description": "Video Six Description",
-            "Thumbnail": "img/portfolio/img6.jpg"
+            "Thumbnail": "img/portfolio/img6.jpg",
+            "Href": "https://www.youtube.com/watch?v=OPf0YbXqDm0"
         }];
 
     }]);
@@ -50,4 +56,9 @@ $(function () {
 // Closes the Responsive Menu on Menu Item Click
 $('.navbar-collapse ul li a').click(function () {
     $('.navbar-toggle:visible').click();
+});
+
+$(document).delegate('*[data-toggle="lightbox"]', 'click', function (event) {
+    event.preventDefault();
+    $(this).ekkoLightbox();
 });

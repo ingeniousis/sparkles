@@ -226,7 +226,9 @@ section {
 }
 
     .btn-outline:hover,
-    .btn-outline:focus {
+    .btn-outline:focus,
+    .btn-outline:active,
+    .btn-outline.active {
         border: solid 2px #fff;
         color: #18bc9c;
         background: #fff;
@@ -265,7 +267,9 @@ footer {
     line-height: 45px;
 }
 
-.btn:focus {
+.btn:focus,
+.btn:active,
+.btn.active {
     outline: 0;
 }
 
