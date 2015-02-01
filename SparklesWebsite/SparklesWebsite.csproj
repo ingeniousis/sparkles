@@ -171,6 +171,10 @@
     <Content Include="Partials\Footer.html" />
     <Content Include="Partials\Header.html" />
     <Content Include="Partials\Tutorials.html" />
+    <Content Include="Scripts\lib\ui-bootstrap-tpls.js" />
+    <Content Include="Scripts\lib\ui-bootstrap-tpls.min.js" />
+    <Content Include="Scripts\lib\ui-bootstrap.js" />
+    <Content Include="Scripts\lib\ui-bootstrap.min.js" />
     <Content Include="Scripts\lib\classie.js" />
     <Content Include="Scripts\app\starter.js" />
     <Content Include="Scripts\lib\angular.js" />

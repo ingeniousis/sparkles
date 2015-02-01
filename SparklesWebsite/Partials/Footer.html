@@ -1,20 +1,20 @@
-﻿
-<div class="footer-above">
+﻿<div class="footer-above" ng-controller="FooterController">
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
                 <br />
-                <form class="form-inline">
+                <form class="form-inline" id="contactForm">
                     <div>
                         <p>To receive our newsletter, please subscribe</p>
                     </div>
                     <br />
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Email Address">
+                        <input type="text" class="form-control" placeholder="Email Address" ng-model="email">
                     </div>
-                    <button type="submit" class="btn btn-success" style="margin-left: 10px">Subscribe</button>
-                    <div id="success" />
+                    <button type="submit" class="btn btn-success" style="margin-left: 10px" ng-click="subscribe()">Subscribe</button>
                 </form>
+                <br />
+                <alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
             </div>
             <div class="col-lg-6">
                 <div class="row">
@@ -22,25 +22,25 @@
                         <h3>Around the Web</h3>
                         <ul class="list-inline">
                             <li>
-                                <a href="https://www.facebook.com/pizzicatopeeps" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                                <a href="{{socialUrls.facebook}}" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
                             </li>
                             <li>
-                                <a href="https://twitter.com/PizzicatoPeeps" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                                <a href="{{socialUrls.twitter}}" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
                             </li>
                             <li>
-                                <a href="#" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-pinterest"></i></a>
+                                <a href="{{socialUrls.pinterest}}" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-pinterest"></i></a>
                             </li>
                             <li>
-                                <a href="http://instagram.com/pizzicatopeeps/" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-instagram"></i></a>
+                                <a href="{{socialUrls.instagram}}" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-instagram"></i></a>
                             </li>
                             <li>
-                                <a href="#" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-youtube"></i></a>
+                                <a href="{{socialUrls.youtube}}" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-youtube"></i></a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
-        </div>        
+        </div>
     </div>
 </div>
 <div class="footer-below">

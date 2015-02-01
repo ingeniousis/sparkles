@@ -16,6 +16,7 @@ namespace SparklesWebsite
                       "~/Scripts/lib/jquery-{version}.js",
                       "~/Scripts/lib/bootstrap.js",
                       "~/Scripts/lib/angular.js",
+                      "~/Scripts/lib/ui-bootstrap-tpls.js",
                       "~/Scripts/lib/classie.js",
                       "~/Scripts/lib/ekko-lightbox.js",
                       "~/Scripts/lib/jquery.easing.{version}.js"));
