@@ -165,8 +165,10 @@
     <Content Include="img\portfolio\img8.jpg" />
     <Content Include="img\portfolio\img9.jpg" />
     <Content Include="img\PPLogo-4.png" />
+    <Content Include="img\team\Begin.JPG" />
     <Content Include="img\team\member1.jpg" />
     <Content Include="img\team\member2.jpg" />
+    <Content Include="img\team\Rachel.jpg" />
     <Content Include="Partials\About.html" />
     <Content Include="Partials\Footer.html" />
     <Content Include="Partials\Header.html" />
