@@ -1,45 +1,47 @@
-﻿<div class="footer-above" ng-controller="FooterController">
-    <div class="container">
-        <form class="form-inline" id="contactForm">
-            <h2>Stay in Touch</h2>
-            <hr class="divider-primary" />
-            <div>
-                <p>Be the first to know about our new content, and get tips delivered right to your inbox.</p>
-            </div>            
-            <div class="form-group">
-                <input type="text" class="form-control" placeholder="Email Address" ng-model="email">
-            </div>
-            <button type="submit" class="btn btn-success" style="margin-left: 10px" ng-click="subscribe()">Subscribe</button>
-        </form>
-        <br />
-        <alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
+﻿<div ng-controller="FooterController">
+    <div class="footer-above">
+        <div class="container">
+            <form class="form-inline" id="contactForm">
+                <h2>Stay in Touch</h2>
+                <hr class="divider-primary" />
+                <div>
+                    <p>Be the first to know about our new content, and get tips delivered right to your inbox.</p>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Email Address" ng-model="email">
+                </div>
+                <button type="submit" class="btn btn-success" style="margin-left: 10px" ng-click="subscribe()">Subscribe</button>
+            </form>
+            <br />
+            <alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
+        </div>
     </div>
-</div>
-<div class="footer-below">
-    <div class="">
-        <div class="row">            
-            <div class="col-lg-6">
-                <div class="row">
-                    <div>
-                        <ul class="list-inline">
-                            <li>
-                                <a href="{{socialUrls.facebook}}" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
-                            </li>
-                            <li>
-                                <a href="{{socialUrls.twitter}}" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
-                            </li>
-                            <li>
-                                <a href="{{socialUrls.instagram}}" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-instagram"></i></a>
-                            </li>
-                            <li>
-                                <a href="{{socialUrls.youtube}}" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-youtube"></i></a>
-                            </li>
-                        </ul>
+    <div class="footer-below">
+        <div class="">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div>
+                            <ul class="list-inline">
+                                <li>
+                                    <a href="{{socialUrls.facebook}}" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                                </li>
+                                <li>
+                                    <a href="{{socialUrls.twitter}}" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                                </li>
+                                <li>
+                                    <a href="{{socialUrls.instagram}}" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-instagram"></i></a>
+                                </li>
+                                <li>
+                                    <a href="{{socialUrls.youtube}}" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-youtube"></i></a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-6">
-                <p class="copyright">Copyright &copy; Pizzicato Peeps 2015</p>
+                <div class="col-lg-6">
+                    <p class="copyright">Copyright &copy; Pizzicato Peeps 2015</p>
+                </div>
             </div>
         </div>
     </div>

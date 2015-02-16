@@ -251,7 +251,7 @@ footer {
 
     footer p {
         padding-bottom: 15px;
-        line-height: 10px;
+        line-height: 25px;
     }
 
     footer .copyright {
@@ -308,6 +308,5 @@ footer {
     .member-photo img {
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
-        border-radius: 50%;
-        height: 300px;
+        border-radius: 50%;        
     }
