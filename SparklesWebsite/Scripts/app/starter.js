@@ -8,9 +8,9 @@ app.controller('FooterController', ['$scope', '$http',
         $scope.socialUrls = {
             facebook: 'https://www.facebook.com/pizzicatopeeps',
             twitter: 'https://twitter.com/PizzicatoPeeps',
-            pinterest: '#',
+            pinterest: 'https://www.pinterest.com/pizzicatopeeps/',
             instagram: 'http://instagram.com/pizzicatopeeps/',
-            youtube: '#'
+            youtube: 'https://www.youtube.com/channel/UCL1gwfk2moAszPELmLNENyw/videos'
         };
 
         $scope.closeAlert = function (index) {

@@ -33,7 +33,7 @@ h6 {
 
 hr.divider-primary,
 hr.divider-secondary {
-    margin: 25px auto 30px;
+    margin: 10px auto 20px;
     padding: 0;
     max-width: 250px;
     border: 0;
@@ -250,8 +250,13 @@ footer {
     }
 
     footer p {
-        margin-bottom: 0px;
+        padding-bottom: 15px;
+        line-height: 10px;
+    }
+
+    footer .copyright {
         line-height: 76px;
+        padding-bottom: 0px;
     }
 
 .btn-social {
