@@ -4,6 +4,7 @@ var app = angular.module('app', ['ui.bootstrap'
 app.controller('FooterController', ['$scope', '$http',
     function ($scope, $http) {        
         $scope.alerts = [];
+        $scope.subscribeInProgress = false;
 
         $scope.socialUrls = {
             facebook: 'https://www.facebook.com/pizzicatopeeps',
@@ -17,16 +18,31 @@ app.controller('FooterController', ['$scope', '$http',
             $scope.alerts.splice(index, 1);
         };
 
-        $scope.subscribe = function () {
+        $scope.subscribe = function () {            
             if (validateEmail($scope.email)) {
-                $http.get('api/feedback').then(
-                    function () {
-                        addAlert(true, 'Thanks! Please check your inbox for an email to confirm your subscription');
+                $scope.subscribeInProgress = true;
+                $http({
+                    url: '/api/subscribe?email=' + $scope.email,
+                    method: 'POST',
+                    data: {}
+                }).then(
+                    function (data) {
+                        if (data.status == 200)
+                        {
+                            addAlert(true, $scope.email + ' is already subscribed to receive email from us.');
+                        }
+                        else
+                        {
+                            addAlert(true, 'Thanks! Please check your inbox for an email to confirm your subscription');
+                        }
+                        
                         $scope.email = undefined;
+                        $scope.subscribeInProgress = false;
                     },
-                    function () {
+                    function (data) {
                         addAlert(false, 'Sorry it seems that the server is not responding. Please try again later!');
                         $scope.email = undefined;
+                        $scope.subscribeInProgress = false;
                     }
                );
             }

@@ -11,6 +11,7 @@
                     <input type="text" class="form-control" placeholder="Email Address" ng-model="email">
                 </div>
                 <button type="submit" class="btn btn-success" style="margin-left: 10px" ng-click="subscribe()">Subscribe</button>
+                <img src="img/loading.gif" ng-hide="!subscribeInProgress" />
             </form>
             <br />
             <alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
