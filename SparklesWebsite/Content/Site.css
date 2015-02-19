@@ -56,7 +56,7 @@ header {
 }
 
     header .container {
-        padding-top: 100px;
+        padding-top: 200px;
         padding-bottom: 50px;
     }
 
@@ -69,7 +69,7 @@ header {
     }
 
     header .intro-text .skills {
-        font-size: 1.25em;
+        font-size: 2.25em;
         font-weight: 300;
     }
 
