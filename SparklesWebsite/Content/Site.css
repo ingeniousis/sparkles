@@ -76,7 +76,7 @@ header {
 @media(min-width:768px) {
     header .container {
         padding-top: 200px;
-        padding-bottom: 100px;
+        padding-bottom: 50px;
     }
 
     header .intro-text .name {
@@ -84,7 +84,7 @@ header {
     }
 
     header .intro-text .skills {
-        font-size: 1.75em;
+        font-size: 2.25em;
     }
 }
 
