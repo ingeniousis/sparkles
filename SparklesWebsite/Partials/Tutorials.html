@@ -7,22 +7,7 @@
             <br /><br /><br /><br />
         </div>
     </div>
-    <div class="row">
-        <div class="col-sm-4">
-            <div ng-repeat="tutorial in tutorials" class="portfolio-item">
-                <a href="{{tutorial.Href}}" data-toggle="lightbox" data-width="800" data-title="{{tutorial.Name}}" data-footer="{{tutorial.Description}}" class="portfolio-link">
-                    <div class="caption">
-                        <div class="caption-content">
-                            <i class="fa fa-play fa-3x"></i>
-                        </div>
-                    </div>
-                    <img ng-src="{{tutorial.Thumbnail}}" class="img-responsive" alt="">
-                </a>
-                <div class="portfolio-caption">
-                    <h4>{{tutorial.Name}}</h4>
-                </div>
-            </div>
-        </div>
+    <div class="row">        
         <div class="col-sm-8">
             <div class="portfolio-item">
                 <div class="portfolio-caption">
@@ -42,8 +27,24 @@
                         <p class="text-muted text-left">{{line}}</p>
                     </div>
                 </div>
+            </div>            
+        </div>
+        <div class="col-sm-4">
+            <div ng-repeat="tutorial in tutorials" class="portfolio-item">
+                <a href="{{tutorial.Href}}" data-toggle="lightbox" data-width="800" data-title="{{tutorial.Name}}" data-footer="{{tutorial.Description}}" class="portfolio-link">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <i class="fa fa-play fa-3x"></i>
+                        </div>
+                    </div>
+                    <img ng-src="{{tutorial.Thumbnail}}" class="img-responsive" alt="">
+                </a>
+                <div class="portfolio-caption">
+                    <h4>{{tutorial.Name}}</h4>
+                </div>
             </div>
-            <p>More videos coming soon</p>
         </div>
     </div>
+    <br />
+    <p class="text-center">More videos coming soon</p>
 </div>
