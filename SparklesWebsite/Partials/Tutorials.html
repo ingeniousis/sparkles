@@ -7,7 +7,7 @@
             <br /><br /><br /><br />
         </div>
     </div>
-    <div class="row">        
+    <div class="row">
         <div class="col-sm-8">
             <div class="portfolio-item">
                 <div class="portfolio-caption">
@@ -27,11 +27,12 @@
                         <p class="text-muted text-left">{{line}}</p>
                     </div>
                 </div>
-            </div>            
+            </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-1" />
+        <div class="col-sm-3">
             <div ng-repeat="tutorial in tutorials" class="portfolio-item">
-                <a href="{{tutorial.Href}}" data-toggle="lightbox" data-width="800" data-title="{{tutorial.Name}}" data-footer="{{tutorial.Description}}" class="portfolio-link">
+                <a ng-click="open(tutorial)" href="" class="portfolio-link">
                     <div class="caption">
                         <div class="caption-content">
                             <i class="fa fa-play fa-3x"></i>

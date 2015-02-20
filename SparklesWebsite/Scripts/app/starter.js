@@ -2,7 +2,7 @@ var app = angular.module('app', ['ui.bootstrap'
 ]);
 
 app.controller('FooterController', ['$scope', '$http',
-    function ($scope, $http) {        
+    function ($scope, $http) {
         $scope.alerts = [];
         $scope.subscribeInProgress = false;
 
@@ -19,7 +19,7 @@ app.controller('FooterController', ['$scope', '$http',
             $scope.alerts.splice(index, 1);
         };
 
-        $scope.subscribe = function () {            
+        $scope.subscribe = function () {
             if (validateEmail($scope.email)) {
                 $scope.subscribeInProgress = true;
                 $http({
@@ -28,15 +28,13 @@ app.controller('FooterController', ['$scope', '$http',
                     data: {}
                 }).then(
                     function (data) {
-                        if (data.status == 200)
-                        {
+                        if (data.status == 200) {
                             addAlert(true, $scope.email + ' is already subscribed to receive email from us.');
                         }
-                        else
-                        {
+                        else {
                             addAlert(true, 'Thanks! Please check your inbox for an email to confirm your subscription');
                         }
-                        
+
                         $scope.email = undefined;
                         $scope.subscribeInProgress = false;
                     },
@@ -63,13 +61,13 @@ app.controller('FooterController', ['$scope', '$http',
         }
     }]);
 
-app.controller('TutorialsController', ['$scope',
-    function ($scope) {
+app.controller('TutorialsController', ['$scope', '$modal',
+    function ($scope, $modal) {
         $scope.featuredTutorial = {
             "Name": "How to loosen and tighten your bow",
             "Description": [
-                " Why you need to tighten and loosen your bow", 
-                " A neat pencil trick to know how much to tighten your bow", 
+                " Why you need to tighten and loosen your bow",
+                " A neat pencil trick to know how much to tighten your bow",
                 " What happens if you tighten or loosen too much?",
                 " What do you do if the frog falls off?"],
             "Thumbnail": "img/portfolio/video2-close.png",
@@ -97,7 +95,26 @@ app.controller('TutorialsController', ['$scope',
             "Href": "https://www.youtube.com/watch?v=ao2rb2xNOD4"
         }];
 
+        $scope.open = function (item) {
+            $modal.open({
+                templateUrl: '../Partials/ModalContent.html',
+                controller: 'ModalInstanceCtrl',
+                size: 'lg',
+                resolve: {
+                    tutorial: function () {
+                        return item;
+                    }
+                }
+            });
+        };
     }]);
+
+app.controller('ModalInstanceCtrl', ['$scope', '$modalInstance', 'tutorial', function ($scope, $modalInstance, tutorial) {
+    $scope.tutorial = tutorial;
+    $scope.close = function () {
+        $modalInstance.dismiss('close');
+    };
+}]);
 
 // jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function () {
