@@ -11,7 +11,8 @@ app.controller('FooterController', ['$scope', '$http',
             twitter: 'https://twitter.com/PizzicatoPeeps',
             pinterest: 'https://www.pinterest.com/pizzicatopeeps/',
             instagram: 'http://instagram.com/pizzicatopeeps/',
-            youtube: 'https://www.youtube.com/channel/UCL1gwfk2moAszPELmLNENyw/videos'
+            youtube: 'https://www.youtube.com/channel/UCL1gwfk2moAszPELmLNENyw/videos',
+            email: 'mailto:info@pizzicatopeeps.com'
         };
 
         $scope.closeAlert = function (index) {
@@ -64,41 +65,36 @@ app.controller('FooterController', ['$scope', '$http',
 
 app.controller('TutorialsController', ['$scope',
     function ($scope) {
+        $scope.featuredTutorial = {
+            "Name": "How to loosen and tighten your bow",
+            "Description": [
+                " Why you need to tighten and loosen your bow", 
+                " A neat pencil trick to know how much to tighten your bow", 
+                " What happens if you tighten or loosen too much?",
+                " What do you do if the frog falls off?"],
+            "Thumbnail": "img/portfolio/video2-close.png",
+            "Href": "https://www.youtube.com/watch?v=ao2rb2xNOD4"
+        };
+
         $scope.tutorials = [{
-            "Name": "Video One",
-            "Description": "Video One Description",
-            "Thumbnail": "img/portfolio/img1.jpg",
-            "Href": "https://www.youtube.com/watch?v=OPf0YbXqDm0"
+            "Name": "How to put on your shoulder rest",
+            "Description": [
+                " Learn shoulder rest basics",
+                " Why use a shoulder rest",
+                " Putting one on the right way and knowing when it's wrong",
+                " Adjusting your shoulder rest to make it more comfortable"],
+            "Thumbnail": "img/portfolio/video1-close.png",
+            "Href": "https://www.youtube.com/watch?v=M4xqz5GioLk"
         },
         {
-            "Name": "Video Two",
-            "Description": "Video Two Description",
-            "Thumbnail": "img/portfolio/img2.jpg",
-            "Href": "https://www.youtube.com/watch?v=OPf0YbXqDm0"
-        },
-        {
-            "Name": "Video Three",
-            "Description": "Video Three Description",
-            "Thumbnail": "img/portfolio/img3.jpg",
-            "Href": "https://www.youtube.com/watch?v=OPf0YbXqDm0"
-        },
-        {
-            "Name": "Video Four",
-            "Description": "Video Four Description",
-            "Thumbnail": "img/portfolio/img4.jpg",
-            "Href": "https://www.youtube.com/watch?v=OPf0YbXqDm0"
-        },
-        {
-            "Name": "Video Five",
-            "Description": "Video Five Description",
-            "Thumbnail": "img/portfolio/img5.jpg",
-            "Href": "https://www.youtube.com/watch?v=OPf0YbXqDm0"
-        },
-        {
-            "Name": "Video Six",
-            "Description": "Video Six Description",
-            "Thumbnail": "img/portfolio/img6.jpg",
-            "Href": "https://www.youtube.com/watch?v=OPf0YbXqDm0"
+            "Name": "How to loosen and tighten your bow",
+            "Description": [
+                " Why you need to tighten and loosen your bow",
+                " A neat pencil trick to know how much to tighten your bow",
+                " What happens if you tighten or loosen too much?",
+                " What do you do if the frog falls off?"],
+            "Thumbnail": "img/portfolio/video2-close.png",
+            "Href": "https://www.youtube.com/watch?v=ao2rb2xNOD4"
         }];
 
     }]);

@@ -128,7 +128,7 @@ header {
 }
 
 section {
-    padding: 100px 0;
+    padding: 75px 0;
 }
 
     section h2 {
@@ -151,6 +151,11 @@ section {
         }
 }
 
+#portfolio .intro-text {
+    font-size: 1.75em;
+    font-weight: 300;
+}
+
 #portfolio .portfolio-item {
     right: 0;
     margin: 0 0 15px;
@@ -160,7 +165,7 @@ section {
         display: block;
         position: relative;
         margin: 0 auto;
-        max-width: 400px;
+        max-width: 600px;
     }
 
         #portfolio .portfolio-item .portfolio-link .caption {
@@ -201,7 +206,7 @@ section {
     #portfolio .portfolio-item .portfolio-caption {
         margin: 0 auto;
         padding: 15px;
-        max-width: 400px;
+        max-width: 600px;
         text-align: center;
         background-color: #2c3e50;
     }
@@ -308,5 +313,5 @@ footer {
     .member-photo img {
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
-        border-radius: 50%;        
+        border-radius: 50%;
     }

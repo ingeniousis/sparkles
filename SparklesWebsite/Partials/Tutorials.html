@@ -3,23 +3,47 @@
         <div class="col-lg-12 text-center">
             <h2>Our Videos</h2>
             <hr class="divider-primary" />
-            <br />
+            <span class="intro-text">Begin and Rachel answer the top questions their students ask. Tell us what you want to learn. </span>
+            <br /><br /><br /><br />
         </div>
     </div>
     <div class="row">
-        <div ng-repeat="tutorial in tutorials" class="col-sm-3 portfolio-item">
-            <a href="{{tutorial.Href}}" data-toggle="lightbox" data-width="800" data-title="{{tutorial.Name}}" data-footer="{{tutorial.Description}}" class="portfolio-link">
-                <div class="caption">
-                    <div class="caption-content">
-                        <i class="fa fa-play fa-3x"></i>
+        <div class="col-sm-4">
+            <div ng-repeat="tutorial in tutorials" class="portfolio-item">
+                <a href="{{tutorial.Href}}" data-toggle="lightbox" data-width="800" data-title="{{tutorial.Name}}" data-footer="{{tutorial.Description}}" class="portfolio-link">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <i class="fa fa-play fa-3x"></i>
+                        </div>
+                    </div>
+                    <img ng-src="{{tutorial.Thumbnail}}" class="img-responsive" alt="">
+                </a>
+                <div class="portfolio-caption">
+                    <h4>{{tutorial.Name}}</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-8">
+            <div class="portfolio-item">
+                <div class="portfolio-caption">
+                    <h4>Video of the Week</h4>
+                </div>
+                <a href="{{featuredTutorial.Href}}" data-toggle="lightbox" data-width="800" data-title="{{featuredTutorial.Name}}" data-footer="{{featuredTutorial.Description}}" class="portfolio-link">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <i class="fa fa-play fa-3x"></i>
+                        </div>
+                    </div>
+                    <img ng-src="{{featuredTutorial.Thumbnail}}" class="img-responsive" alt="">
+                </a>
+                <div class="portfolio-caption">
+                    <h4>{{featuredTutorial.Name}}</h4>
+                    <div ng-repeat="line in featuredTutorial.Description">
+                        <p class="text-muted text-left">{{line}}</p>
                     </div>
                 </div>
-                <img ng-src="{{tutorial.Thumbnail}}" class="img-responsive" alt="">
-            </a>
-            <div class="portfolio-caption">
-                <h4>{{tutorial.Name}}</h4>
-                <p class="text-muted">{{tutorial.Description}}</p>
             </div>
+            <p>More videos coming soon</p>
         </div>
     </div>
 </div>
