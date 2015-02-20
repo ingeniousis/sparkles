@@ -162,15 +162,6 @@
     <None Include="Properties\PublishProfiles\SparklesWebsite.pubxml" />
     <Content Include="img\favicon.ico" />
     <Content Include="img\loading.gif" />
-    <Content Include="img\portfolio\img1.jpg" />
-    <Content Include="img\portfolio\img2.jpg" />
-    <Content Include="img\portfolio\img3.jpg" />
-    <Content Include="img\portfolio\img4.jpg" />
-    <Content Include="img\portfolio\img5.jpg" />
-    <Content Include="img\portfolio\img6.jpg" />
-    <Content Include="img\portfolio\img7.jpg" />
-    <Content Include="img\portfolio\img8.jpg" />
-    <Content Include="img\portfolio\img9.jpg" />
     <Content Include="img\portfolio\video1-close.PNG" />
     <Content Include="img\portfolio\video1.PNG" />
     <Content Include="img\portfolio\video2-close.PNG" />
