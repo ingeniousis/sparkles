@@ -18,7 +18,7 @@ namespace MailChimpTryout
             mc = new MailChimpManager("e56d8dcb829f31dd6f48510eef0e2ef7-us10");
             //Subscribe("4c74b43c81", "pranipborah@outlook.com");
             //UnSubscribe("4c74b43c81", "pranip@outlook.com");
-            UnSubscribe("4c74b43c81", "pranip@gmail.com");
+            //UnSubscribe("4c74b43c81", "pranip@gmail.com");
             GetSubscribers();
             Console.ReadLine();
         }
