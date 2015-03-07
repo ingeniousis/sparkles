@@ -8,12 +8,12 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-8">
+        <div class="col-sm-9">
             <div class="portfolio-item">
                 <div class="portfolio-caption">
                     <h4>Video of the Week</h4>
                 </div>
-                <a href="{{featuredTutorial.Href}}" data-toggle="lightbox" data-width="800" data-title="{{featuredTutorial.Name}}" data-footer="{{featuredTutorial.Description}}" class="portfolio-link">
+                <a ng-click="open(featuredTutorial)" href="" class="portfolio-link">
                     <div class="caption">
                         <div class="caption-content">
                             <i class="fa fa-play fa-3x"></i>
@@ -23,13 +23,11 @@
                 </a>
                 <div class="portfolio-caption">
                     <h4>{{featuredTutorial.Name}}</h4>
-                    <div ng-repeat="line in featuredTutorial.Description">
-                        <p class="text-muted text-left">{{line}}</p>
-                    </div>
+                    <p class="text-muted text-left">{{featuredTutorial.Description}}</p>
                 </div>
             </div>
         </div>
-        <div class="col-sm-1" />
+     
         <div class="col-sm-3">
             <div ng-repeat="tutorial in tutorials" class="portfolio-item">
                 <a ng-click="open(tutorial)" href="" class="portfolio-link">
@@ -44,8 +42,8 @@
                     <h4>{{tutorial.Name}}</h4>
                 </div>
             </div>
+            <br />
+            <p class="text-center">More videos coming soon</p>
         </div>
     </div>
-    <br />
-    <p class="text-center">More videos coming soon</p>
 </div>

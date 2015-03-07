@@ -22,6 +22,7 @@ namespace SparklesWebsite
                       "~/Scripts/lib/jquery.easing.{version}.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/app-scripts").Include(
+                      "~/Scripts/app/utility.js",
                       "~/Scripts/app/starter.js"));
 
             bundles.Add(new StyleBundle("~/Content/lib-css").Include(

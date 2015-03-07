@@ -63,43 +63,31 @@ app.controller('FooterController', ['$scope', '$http',
 
 app.controller('TutorialsController', ['$scope', '$modal',
     function ($scope, $modal) {
-        $scope.featuredTutorial = {
-            "Name": "How to loosen and tighten your bow",
-            "Description": [
-                " Why you need to tighten and loosen your bow",
-                " A neat pencil trick to know how much to tighten your bow",
-                " What happens if you tighten or loosen too much?",
-                " What do you do if the frog falls off?"],
-            "Thumbnail": "img/portfolio/video2-close.png",
-            "Href": "https://www.youtube.com/watch?v=ao2rb2xNOD4"
-        };
 
         $scope.tutorials = [{
             "Name": "How to put on your shoulder rest",
-            "Description": [
-                " Learn shoulder rest basics",
-                " Why use a shoulder rest",
-                " Putting one on the right way and knowing when it's wrong",
-                " Adjusting your shoulder rest to make it more comfortable"],
+            "Description": "Learn shoulder rest basics. In this video, we'll teach you how to put one on the right way, knowing when it's wrong and adjusting your shoulder rest to make it more comfortable.",
             "Thumbnail": "img/portfolio/video1-close.png",
-            "Href": "https://www.youtube.com/watch?v=M4xqz5GioLk"
+            "Id": "M4xqz5GioLk"
         },
         {
             "Name": "How to loosen and tighten your bow",
-            "Description": [
-                " Why you need to tighten and loosen your bow",
-                " A neat pencil trick to know how much to tighten your bow",
-                " What happens if you tighten or loosen too much?",
-                " What do you do if the frog falls off?"],
+            "Description": "Learn why you need to loosen and tighten your bow. In this video, we'll teach you a neat pencil trick to know how much to tighten your bow. You will also learn what happens if you tighten or loosen too much, and what to do if your frog falls off!",
             "Thumbnail": "img/portfolio/video2-close.png",
-            "Href": "https://www.youtube.com/watch?v=ao2rb2xNOD4"
+            "Id": "ao2rb2xNOD4"
         }];
 
+        $scope.tutorials.forEach(function (tutorial) {
+            tutorial.Href = String.format("https://www.youtube.com/embed/{0}?badge=0&amp;autoplay=1&amp;html5=1", tutorial.Id);            
+        });
+
+        $scope.featuredTutorial = $scope.tutorials[$scope.tutorials.length - 1];
+        
         $scope.open = function (item) {
             $modal.open({
                 templateUrl: '../Partials/ModalContent.html',
                 controller: 'ModalInstanceCtrl',
-                size: 'lg',
+                size: 'md',
                 resolve: {
                     tutorial: function () {
                         return item;
@@ -109,8 +97,17 @@ app.controller('TutorialsController', ['$scope', '$modal',
         };
     }]);
 
-app.controller('ModalInstanceCtrl', ['$scope', '$modalInstance', 'tutorial', function ($scope, $modalInstance, tutorial) {
+app.controller('ModalInstanceCtrl', ['$scope', '$sce', '$modalInstance', 'tutorial', function ($scope, $sce, $modalInstance, tutorial) {
     $scope.tutorial = tutorial;
+    $scope.url = $sce.trustAsResourceUrl(tutorial.Href);
+
+    var shareUrls = {};
+    shareUrls.facebook = String.format("https://www.facebook.com/sharer.php?u=http://y2u.be/{0}", tutorial.Id);
+    shareUrls.twitter = String.format("https://twitter.com/share?url=http://y2u.be/{0}&text={1}&hashtags=pizzicatopeeps", tutorial.Id, tutorial.Name);
+    shareUrls.google = String.format("https://plus.google.com/share?url=http://y2u.be/{0}", tutorial.Id);
+    shareUrls.email = String.format("mailto:?Subject={0}&Body=I%20saw%20this%20and%20thought%20of%20sharing%20with%20you!%20 https://www.youtube.com/watch?v={1}", tutorial.Name, tutorial.Id);
+    $scope.shareUrls = shareUrls;
+
     $scope.close = function () {
         $modalInstance.dismiss('close');
     };
@@ -132,7 +129,12 @@ $('.navbar-collapse ul li a').click(function () {
     $('.navbar-toggle:visible').click();
 });
 
-$(document).delegate('*[data-toggle="lightbox"]', 'click', function (event) {
-    event.preventDefault();
-    $(this).ekkoLightbox();
-});
+// Extends String class with format method
+if (!String.prototype.format) {
+    String.format = function (format) {
+        var args = Array.prototype.slice.call(arguments, 1);
+        return format.replace(/{(\d+)}/g, function (match, number) {
+            return typeof args[number] != 'undefined' ? args[number] : match;
+        });
+    };
+}
