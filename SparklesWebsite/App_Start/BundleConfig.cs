@@ -18,7 +18,7 @@ namespace SparklesWebsite
                       "~/Scripts/lib/angular.js",
                       "~/Scripts/lib/ui-bootstrap-tpls.js",
                       "~/Scripts/lib/classie.js",
-                      "~/Scripts/lib/ekko-lightbox.js",
+                      "~/Scripts/lib/social-buttons.js",
                       "~/Scripts/lib/jquery.easing.{version}.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/app-scripts").Include(
@@ -28,7 +28,7 @@ namespace SparklesWebsite
             bundles.Add(new StyleBundle("~/Content/lib-css").Include(
                       "~/Content/bootstrap.min.css",
                       "~/Content/font-awesome.css",
-                      "~/Content/ekko-lightbox.css"));
+                      "~/Content/social-buttons.css"));
 
             bundles.Add(new StyleBundle("~/Content/app-css").Include(
                       "~/Content/site.css",

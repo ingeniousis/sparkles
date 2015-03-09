@@ -1,12 +1,18 @@
 ﻿<div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" ng-click="close()">×</button>
-    <h4 class="modal-title">{{ tutorial.Name }}</h4>
+    <h3 class="modal-title">{{ video.Name }}</h3>
 </div>
 <div class="modal-body">
     <iframe width="100%" height="400" src="{{url}}" frameborder="0" allowfullscreen></iframe>
 </div>
 <div class="modal-footer">
-    <div class="pull-left">
+    <div class="text-justify">
+        <p>{{video.Description}}</p>
+    </div>
+</div>
+<div class="modal-footer">
+    <div>
+        <p class="pull-left">Share this video with your friends</p> 
         <a href="{{shareUrls.facebook}}" target="_blank">
             <img src="https://cache.addthiscdn.com/icons/v2/thumbs/32x32/facebook.png" border="0" alt="Facebook" /></a>
         <a href="{{shareUrls.twitter}}" target="_blank">
@@ -15,10 +21,5 @@
             <img src="https://cache.addthiscdn.com/icons/v2/thumbs/32x32/google.png" border="0" alt="Google" /></a>
         <a href="{{shareUrls.email}}">
             <img src="https://cache.addthiscdn.com/icons/v2/thumbs/32x32/email.png" border="0" alt="Email" /></a>
-    </div>
-</div>
-<div class="modal-footer">
-    <div class="text-justify">
-        <p>{{tutorial.Description}}</p>
     </div>
 </div>

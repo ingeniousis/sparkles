@@ -9,37 +9,37 @@
     </div>
     <div class="row">
         <div class="col-sm-9">
-            <div class="portfolio-item">
+            <div class="portfolio-item  pull-left">
                 <div class="portfolio-caption">
-                    <h4>Video of the Week</h4>
+                    <h3>Featured Video</h3>
                 </div>
-                <a ng-click="open(featuredTutorial)" href="" class="portfolio-link">
+                <a ng-click="open(featuredVideo)" href="" class="portfolio-link">
                     <div class="caption">
                         <div class="caption-content">
                             <i class="fa fa-play fa-3x"></i>
                         </div>
                     </div>
-                    <img ng-src="{{featuredTutorial.Thumbnail}}" class="img-responsive" alt="">
+                    <img ng-src="{{featuredVideo.Thumbnail}}" class="img-responsive" alt="">
                 </a>
                 <div class="portfolio-caption">
-                    <h4>{{featuredTutorial.Name}}</h4>
-                    <p class="text-muted text-left">{{featuredTutorial.Description}}</p>
+                    <h3>{{featuredVideo.Name}}</h3>
+                    <p class="text-muted text-justify">{{featuredVideo.Description}}</p>
                 </div>
             </div>
         </div>
      
         <div class="col-sm-3">
-            <div ng-repeat="tutorial in tutorials" class="portfolio-item">
-                <a ng-click="open(tutorial)" href="" class="portfolio-link">
+            <div ng-repeat="video in earlierVideos" class="portfolio-item">
+                <a ng-click="open(video)" href="" class="portfolio-link">
                     <div class="caption">
                         <div class="caption-content">
                             <i class="fa fa-play fa-3x"></i>
                         </div>
                     </div>
-                    <img ng-src="{{tutorial.Thumbnail}}" class="img-responsive" alt="">
+                    <img ng-src="{{video.Thumbnail}}" class="img-responsive" alt="">
                 </a>
                 <div class="portfolio-caption">
-                    <h4>{{tutorial.Name}}</h4>
+                    <h4>{{video.Name}}</h4>
                 </div>
             </div>
             <br />

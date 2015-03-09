@@ -81,7 +81,9 @@ app.controller('TutorialsController', ['$scope', '$modal',
             tutorial.Href = String.format("https://www.youtube.com/embed/{0}?badge=0&amp;autoplay=1&amp;html5=1", tutorial.Id);            
         });
 
-        $scope.featuredTutorial = $scope.tutorials[$scope.tutorials.length - 1];
+        var length = $scope.tutorials.length;
+        $scope.featuredVideo = $scope.tutorials[length - 1];
+        $scope.earlierVideos = $scope.tutorials.slice(0, length - 1);
         
         $scope.open = function (item) {
             $modal.open({
@@ -89,7 +91,7 @@ app.controller('TutorialsController', ['$scope', '$modal',
                 controller: 'ModalInstanceCtrl',
                 size: 'md',
                 resolve: {
-                    tutorial: function () {
+                    video: function () {
                         return item;
                     }
                 }
@@ -97,15 +99,15 @@ app.controller('TutorialsController', ['$scope', '$modal',
         };
     }]);
 
-app.controller('ModalInstanceCtrl', ['$scope', '$sce', '$modalInstance', 'tutorial', function ($scope, $sce, $modalInstance, tutorial) {
-    $scope.tutorial = tutorial;
-    $scope.url = $sce.trustAsResourceUrl(tutorial.Href);
+app.controller('ModalInstanceCtrl', ['$scope', '$sce', '$modalInstance', 'video', function ($scope, $sce, $modalInstance, video) {
+    $scope.video = video;
+    $scope.url = $sce.trustAsResourceUrl(video.Href);
 
     var shareUrls = {};
-    shareUrls.facebook = String.format("https://www.facebook.com/sharer.php?u=http://y2u.be/{0}", tutorial.Id);
-    shareUrls.twitter = String.format("https://twitter.com/share?url=http://y2u.be/{0}&text={1}&hashtags=pizzicatopeeps", tutorial.Id, tutorial.Name);
-    shareUrls.google = String.format("https://plus.google.com/share?url=http://y2u.be/{0}", tutorial.Id);
-    shareUrls.email = String.format("mailto:?Subject={0}&Body=I%20saw%20this%20and%20thought%20of%20sharing%20with%20you!%20 https://www.youtube.com/watch?v={1}", tutorial.Name, tutorial.Id);
+    shareUrls.facebook = String.format("https://www.facebook.com/sharer.php?u=http://y2u.be/{0}", video.Id);
+    shareUrls.twitter = String.format("https://twitter.com/share?url=http://y2u.be/{0}&text={1}&hashtags=pizzicatopeeps", video.Id, video.Name);
+    shareUrls.google = String.format("https://plus.google.com/share?url=http://y2u.be/{0}", video.Id);
+    shareUrls.email = String.format("mailto:?Subject={0}&Body=I%20saw%20this%20and%20thought%20of%20sharing%20with%20you!%20 https://www.youtube.com/watch?v={1}", video.Name, video.Id);
     $scope.shareUrls = shareUrls;
 
     $scope.close = function () {
