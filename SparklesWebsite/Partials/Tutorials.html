@@ -4,19 +4,22 @@
             <h2>Our Videos</h2>
             <hr class="divider-primary" />
             <span class="intro-text">Begin and Rachel answer the top questions their students ask. Tell us what you want to learn. </span>
-            <br /><br /><br /><br />
+            <br />
+            <br />
+            <br />
+            <br />
         </div>
     </div>
     <div class="row">
         <div class="col-sm-9">
-            <div class="portfolio-item  pull-left">
+            <div class="portfolio-item pull-left">
                 <div class="portfolio-caption">
                     <h3>Featured Video</h3>
                 </div>
                 <a ng-click="open(featuredVideo)" href="" class="portfolio-link">
                     <div class="caption">
                         <div class="caption-content">
-                            <i class="fa fa-play fa-3x play-icon"></i>
+                            <i class="fa fa-play-circle-o fa-3x play-icon"></i>
                         </div>
                     </div>
                     <img ng-src="{{featuredVideo.Thumbnail}}" class="img-responsive" alt="">
@@ -25,25 +28,30 @@
                     <h3>{{featuredVideo.Name}}</h3>
                     <p class="text-muted text-justify">{{featuredVideo.Description}}</p>
                 </div>
+                  <br /><br />
             </div>
+          
         </div>
-     
-        <div class="col-sm-3">
-            <div ng-repeat="video in earlierVideos" class="portfolio-item">
-                <a ng-click="open(video)" href="" class="portfolio-link">
-                    <div class="caption">
-                        <div class="caption-content">
-                            <i class="fa fa-play fa-3x play-icon"></i>
+        <div class="col-sm-3" style="display: inline-block">
+            <div ng-repeat="video in earlierVideos">
+                <div class="portfolio-item">
+                    <a ng-click="open(video)" href="" class="portfolio-link">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-play-circle-o fa-3x play-icon"></i>
+                            </div>
                         </div>
+                        <img ng-src="{{video.Thumbnail}}" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>{{video.Name}}</h4>
                     </div>
-                    <img ng-src="{{video.Thumbnail}}" class="img-responsive" alt="">
-                </a>
-                <div class="portfolio-caption">
-                    <h4>{{video.Name}}</h4>
                 </div>
             </div>
             <br />
-            <p class="text-center">More videos coming soon</p>
+            <div>
+                <p class="text-center">More videos coming soon</p>
+            </div>
         </div>
     </div>
 </div>

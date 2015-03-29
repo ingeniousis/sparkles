@@ -64,12 +64,13 @@ app.controller('FooterController', ['$scope', '$http',
 app.controller('TutorialsController', ['$scope', '$modal',
     function ($scope, $modal) {
 
-        $scope.tutorials = [{
+        $scope.tutorials = [
+        {
             "Name": "How to put on your shoulder rest",
             "Description": "Learn shoulder rest basics. In this video, we'll teach you how to put one on the right way, knowing when it's wrong and adjusting your shoulder rest to make it more comfortable.",
             "Thumbnail": "img/portfolio/video1-close.png",
             "Id": "M4xqz5GioLk"
-        },
+        },        
         {
             "Name": "How to loosen and tighten your bow",
             "Description": "Learn why you need to loosen and tighten your bow. In this video, we'll teach you a neat pencil trick to know how much to tighten your bow. You will also learn what happens if you tighten or loosen too much, and what to do if your frog falls off!",
