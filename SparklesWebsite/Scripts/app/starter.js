@@ -75,6 +75,12 @@ app.controller('TutorialsController', ['$scope', '$modal',
             "Description": "Learn why you need to loosen and tighten your bow. In this video, we'll teach you a neat pencil trick to know how much to tighten your bow. You will also learn what happens if you tighten or loosen too much, and what to do if your frog falls off!",
             "Thumbnail": "img/portfolio/video2-close.png",
             "Id": "ao2rb2xNOD4"
+        },
+        {
+            "Name": "7 Pitiful Posture Problems",
+            "Description": "Learn how to hold the violin and how to fix common problems with holding the violin. In this video, we will show you 7 pitiful posture problems. Watch out for these when you are playing and try your best to get them perfect.",
+            "Thumbnail": "img/portfolio/video3-close.png",
+            "Id": "hPOUfgN_2vo"
         }];
 
         $scope.tutorials.forEach(function (tutorial) {

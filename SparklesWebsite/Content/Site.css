@@ -219,6 +219,10 @@ section {
     z-index: 2;
 }
 
+.play-icon {
+    color: #ffffff;
+}
+
 @media(min-width:767px) {
     #portfolio .portfolio-item {
         margin: 0 0 30px;
