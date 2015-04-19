@@ -66,6 +66,12 @@ app.controller('TutorialsController', ['$scope', '$modal',
 
         $scope.tutorials = [
         {
+            "Name": "5 exercises to perfect your bow hold",
+            "Description": "Learn one of the most important parts of playing the violin - the bow hold. In this video, we teach you how to hold your bow, and show you 5 exercises to strengthen your bow hold. Practice on and perfect your bow hold.",
+            "Thumbnail": "img/portfolio/video4-close.png",
+            "Id": "jAh99ic71_g"
+        },
+        {
             "Name": "How to put on your shoulder rest",
             "Description": "Learn shoulder rest basics. In this video, we'll teach you how to put one on the right way, knowing when it's wrong and adjusting your shoulder rest to make it more comfortable.",
             "Thumbnail": "img/portfolio/video1-close.png",
