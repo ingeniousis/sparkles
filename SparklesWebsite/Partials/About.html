@@ -1,4 +1,4 @@
-﻿<div class="container">
+﻿<div ng-controller="AboutController" class="container">
     <div class="row">
         <div class="col-lg-12 text-center">
             <h2>About Us</h2>
@@ -7,25 +7,24 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-5">
-            <div class="text-center">
-                <div class=""><img src="img/team/begin.jpg" alt="Begin Scarseth''s photo" /></div>
-                <div class="team-detail">
-                    <h3>Begin Scarseth</h3>
-                    <p class="text-justify">Begin Scarseth is an active performer and teacher in the Seattle area. She is the concertmaster of the Seattle Rock Orchestra and plays in the Tacoma Symphony.  Begin recieved her Bachelors of Musical Arts degree from Pacific Lutheran University in 2004.  Since then, she has established large private teaching studios and does outreach work through the Seattle Youth Symphony Orchestras. Begin teaches hundreds of students every week both in her work in the public schools and her private lessons. She strongly believes that having music in one's life helps with self-esteem, lifelong friend making and a general positive outlook on life.  Begin is a mother of two young daughters and enjoys working in her garden, dancing and cooking. </p>
-                </div>
-            </div>
+        <div ng-repeat="profile in [beginProfile]" class="col-sm-6" style="padding-right: 30px">
+            <div ng-include="'../Partials/Profile.html'"></div>
         </div>
-        <div class="col-sm-2" />
-        <div class="col-sm-5">
-            <div class="text-center">
-                <div class=""><img src="img/team/rachel.jpg" alt="Rachel Nesvig''s photo" /></div>
-                <div class="team-detail">
-                    <h3>Rachel Nesvig</h3>
-                    <p class="text-justify">Orchestra teacher by day, violinist by night - Rachel plays the violin in the Tacoma Symphony, Yakima Symphony, Seattle Rock Orchestra and other local groups.  She has coached camps such as the Icicle Creek Summer Symphony, Seattle Rock Orchestra Summer Intensive, Evergreen Music Festival and the Kenya National Youth Orchestra. She graduated from St. Olaf College with a double major in Music and Norwegian, followed by her K-12 Teaching Certificate and Masters in Violin Performance from the Central Washington University.  Although violin takes up a lot of time, Rachel also enjoys being in nature, bike riding, rock climbing, traveling, sunshine, drinking coffee, playing the Hardanger Fiddle and being silly!</p>
-                </div>
-            </div>
+        
+        <div ng-repeat="profile in [rachelProfile]" class="col-sm-6">
+            <div ng-include="'../Partials/Profile.html'"></div>
         </div>
     </div>
 
+    <div class="row">
+        <div ng-repeat="profile in [dhruvProfile]" class="col-sm-4" style="padding-right: 30px">
+            <div ng-include="'../Partials/Profile.html'"></div>
+        </div>
+        <div ng-repeat="profile in [sonalProfile]" class="col-sm-4" style="padding-right: 30px">
+            <div ng-include="'../Partials/Profile.html'"></div>
+        </div>
+        <div ng-repeat="profile in [pranipProfile]" class="col-sm-4">
+            <div ng-include="'../Partials/Profile.html'"></div>
+        </div>
+    </div>
 </div>

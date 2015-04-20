@@ -61,6 +61,46 @@ app.controller('FooterController', ['$scope', '$http',
         }
     }]);
 
+app.controller('AboutController', ['$scope',
+    function ($scope) {
+        $scope.beginProfile = 
+        {
+            "Name": "Begin Scarseth",
+            "Description": "Begin Scarseth is an active performer and teacher in the Seattle area. She is the concertmaster of the Seattle Rock Orchestra and plays in the Tacoma Symphony.  Begin recieved her Bachelors of Musical Arts degree from Pacific Lutheran University in 2004.  Since then, she has established large private teaching studios and does outreach work through the Seattle Youth Symphony Orchestras. Begin teaches hundreds of students every week both in her work in the public schools and her private lessons. She strongly believes that having music in one's life helps with self-esteem, lifelong friend making and a general positive outlook on life.  Begin is a mother of two young daughters and enjoys working in her garden, dancing and cooking. ",
+            "Thumbnail": "img/team/begin.jpg"
+        };
+
+        $scope.rachelProfile = 
+        {
+            "Name": "Rachel Nesvig",
+            "Description": "Orchestra teacher by day, violinist by night - Rachel plays the violin in the Tacoma Symphony, Yakima Symphony, Seattle Rock Orchestra and other local groups.  She has coached camps such as the Icicle Creek Summer Symphony, Seattle Rock Orchestra Summer Intensive, Evergreen Music Festival and the Kenya National Youth Orchestra. She graduated from St. Olaf College with a double major in Music and Norwegian, followed by her K-12 Teaching Certificate and Masters in Violin Performance from the Central Washington University.  Although violin takes up a lot of time, Rachel also enjoys being in nature, bike riding, rock climbing, traveling, sunshine, drinking coffee, playing the Hardanger Fiddle and being silly!",
+            "Thumbnail": "img/team/rachel.jpg"
+        };
+
+        $scope.dhruvProfile = 
+        {
+            "Name": "Dhruv Sood",
+            "Description": "A user experience program manager at Microsoft, Dhruv is also a violinist and performs in the intermediate orchestra at WSCO. Passionate about both music and tech, he founded Pizzicato Peeps and is our director and content producer.",
+            "Thumbnail": "img/team/dhruv.jpg"
+        };
+
+        $scope.sonalProfile = 
+        {
+            "Name": "Sonal Gandhi",
+            "Description": "Sonal is the data whiz and number cruncher for Pizzicato Peeps. She is listening to every comment we get on our videos via YouTube and social media, learning how we can make our videos more useful and grow the Pizzicato Peeps community. In her other life, she is a Software Developer and an amateur pianist.",
+            "Thumbnail": "img/team/sonal.jpg"
+        };
+
+        $scope.pranipProfile = 
+        {
+            "Name": "Pranip Borah",
+            "Description": "Music Lover, technophile, and startup enthusiast. As our 'Chief Technology Officer', Pranip is in charge of the website and other tech stuff at Pizzicato Peeps. ",
+            "Thumbnail": "img/team/pranip.jpg"
+        };
+
+    }]);
+
+
 app.controller('TutorialsController', ['$scope', '$modal',
     function ($scope, $modal) {
 

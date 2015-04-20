@@ -170,13 +170,17 @@
     <Content Include="img\portfolio\video4-close.png" />
     <Content Include="img\PPLogo-4.png" />
     <Content Include="img\team\Begin.JPG" />
+    <Content Include="img\team\dhruv.jpg" />
     <Content Include="img\team\member1.jpg" />
     <Content Include="img\team\member2.jpg" />
+    <Content Include="img\team\pranip.jpg" />
     <Content Include="img\team\Rachel.jpg" />
+    <Content Include="img\team\sonal.jpg" />
     <Content Include="Partials\About.html" />
     <Content Include="Partials\Footer.html" />
     <Content Include="Partials\Header.html" />
     <Content Include="Partials\ModalContent.html" />
+    <Content Include="Partials\Profile.html" />
     <Content Include="Partials\Tutorials.html" />
     <Content Include="Scripts\lib\ui-bootstrap-tpls.js" />
     <Content Include="Scripts\lib\ui-bootstrap-tpls.min.js" />
