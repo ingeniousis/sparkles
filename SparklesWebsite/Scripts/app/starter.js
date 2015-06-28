@@ -128,6 +128,12 @@ app.controller('TutorialsController', ['$scope', '$modal',
             "Description": "Learn how to hold the violin and how to fix common problems with holding the violin. In this video, we will show you 7 pitiful posture problems. Watch out for these when you are playing and try your best to get them perfect.",
             "Thumbnail": "img/portfolio/video3-close.png",
             "Id": "hPOUfgN_2vo"
+        },
+        {
+            "Name": "How to play Happy Birthday on the violin",
+            "Description": "Learn how to play Happy Birthday on the violin with this special, karaoke-style, play along version. Watch till the end where Rachel & Begin perform a fancied-up version of Happy Birthday.",
+            "Thumbnail": "img/portfolio/video5-close.png",
+            "Id": "usVyI455YfY"
         }];
 
         $scope.tutorials.forEach(function (tutorial) {
